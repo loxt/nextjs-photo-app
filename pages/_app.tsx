@@ -1,9 +1,9 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import Header from "../components/shared/header";
 import Footer from "../components/shared/footer";
 import React from "react";
 
-function MyApp({ Component, pageProps }) {
+export default function MyApp({ Component, pageProps }) {
   return <>
     <Header/>
     <Component {...pageProps} />
@@ -11,4 +11,3 @@ function MyApp({ Component, pageProps }) {
   </>
 }
 
-export default MyApp
