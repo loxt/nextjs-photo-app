@@ -1,12 +1,12 @@
 import '../styles/globals.scss';
 import Header from '../components/shared/header';
 import Footer from '../components/shared/footer';
-import React, { useLayoutEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 export default function MyApp({ Component, pageProps }) {
   const [photos, setPhotos] = useState([]);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     fetch('/mocks/items.json')
       .then((res) => res.json())
       .then((data) => setPhotos(data));
@@ -15,7 +15,7 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <>
       <Header />
-      <Component {...pageProps} />
+      <Component data={photos} {...pageProps} />
       <Footer />
     </>
   );
