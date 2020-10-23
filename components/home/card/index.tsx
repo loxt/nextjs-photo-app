@@ -6,7 +6,7 @@ import br from 'date-fns/locale/pt-BR';
 export default function Card(props) {
   const [photo, setPhoto] = useState(props.photo);
   return (
-    <div className='card text-white bg-dark mb-3 w-100 col-12'>
+    <div className='card text-white bg-dark mb-3'>
       <div className='card-header pl-2'>
         <Link href={`/user/${photo.userId}`}>
           <div className='row'>
